@@ -56,8 +56,10 @@ class _MainScreenState extends State<MainScreen> {
                         title: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text(
-                              tarefas[index],
+                            Flexible(
+                              child: Text(
+                                tarefas[index],
+                              ),
                             ),
                             Container(
                               width: 50,
