@@ -14,7 +14,13 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('To Do List'),
+          backgroundColor: Colors.purple,
+          title: Text(
+            'To Do List',
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ),
           centerTitle: true,
         ),
         body: SingleChildScrollView(
@@ -61,19 +67,24 @@ class _MainScreenState extends State<MainScreen> {
                                 tarefas[index],
                               ),
                             ),
-                            Container(
-                              width: 50,
-                              height: 40,
-                              child: MaterialButton(
-                                padding: EdgeInsets.all(0),
-                                onPressed: () {
-                                  setState(() {
-                                    tarefas.removeAt(index);
-                                  });
-                                },
-                                color: Colors.red,
-                                child: Icon(Icons.delete_forever,
-                                    color: Colors.white, size: 30),
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                left: 10,
+                              ),
+                              child: Container(
+                                width: 50,
+                                height: 40,
+                                child: MaterialButton(
+                                  padding: EdgeInsets.all(0),
+                                  onPressed: () {
+                                    setState(() {
+                                      tarefas.removeAt(index);
+                                    });
+                                  },
+                                  color: Colors.red,
+                                  child: Icon(Icons.delete_forever,
+                                      color: Colors.white, size: 30),
+                                ),
                               ),
                             )
                           ],
